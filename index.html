@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <Title>Welcome to ZAD's Pizza Truck</Title>
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body>
+        <div id="wrapper">
+            <header class="top">
+                <img src="img/zadspizza.jpg" width="1000" height="330" alt="ZAD's Pizza Logo" />
+            </header>
+            <nav class="left">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="admin.html">Admin</a></li>
+                </ul>
+                <ul>
+                    <li>Phone:<br>(414) 897-7367</li>
+                </ul>
+            </nav>
+            <h1 id="santino">Welcome to ZAD's Pizza Truck!</h1>
+            <hr>
+            <section class="maina">
+                <p>
+                    <strong>ZAD's aims to be Wisconsin's best food truck.</strong>
+                    We have a policy of only using the freshest and best ingredients in all our menu items. 
+                    We also only use locally sourced foods and products in our dishes. Some of the things that set our pizza apart: using Caputo 00 flour, 
+                    Grande mozzarella and San Marzano tomatoes. <em>We also bake our pizzas in our woodfire oven using fresh cut cherry wood from northern Wisconsin 
+                    that will keep you coming back for more!</em>
+                </p>
+                <video width="360" height="240" controls>
+                    <source src="video/pizzavid.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                  </video>
+                <h2 style="text-decoration: underline;">Upcoming Event Schedule</h2>
+                <ul>
+                    <li><a href="javascript:void(0);" onclick="showEventInformation('milwaukee')">Milwaukee Food Festival</a></li>
+                    <li><a href="javascript:void(0);" onclick="showEventInformation('appleton')">Appleton Food Truck Gathering</a></li>
+                    <li><a href="javascript:void(0);" onclick="showEventInformation('madison')">Madison Food Truck Event</a></li>
+                </ul>
+                <div id="eventInfo" style="margin-top: 20px;"></div>
+            </section>
+            <section class="mainb">
+                <img src="img/pizzatruck3.jpg" alt="" width="350" height="350" />
+                <img src="img/pizzatruck2.jpg" alt="" width="350" height="350" />
+            </section>
+            <footer class="bottom">
+                <small>&copy; 2024 ZAD's Pizza Inc.</small>
+                <address>
+                    <small>Have a question or comment about the site? <a href="site-feedback.html">Contact Our Web Team</small>
+                </address>
+            </footer>
+        </div>
+        <script>
+            function showEventInformation(event) {
+                var info = document.getElementById('eventInfo');
+                if (event === 'milwaukee') {
+                    info.innerHTML = '<h3>Milwaukee Food Festival</h3><p>Location: Milwaukee Public Market <br>Date: June 19, 2024<br>Hours: 11 AM to 9 PM</p>';
+                } else if (event === 'appleton') {
+                    info.innerHTML = '<h3>Appleton Food Truck Gathering</h3><p>Location: Appleton Memorial Park<br>Date: July 9, 2024<br>Hours: 11 AM to 7 PM</p>';
+                } else if (event === 'madison') {
+                    info.innerHTML = '<h3>Madison Food Truck Event</h3><p>Location: James Madison Park <br>Date: August 15, 2024<br>Hours: 9 AM to 11 PM</p>';
+                }
+            }
+        </script>
+    </body>
+</html>

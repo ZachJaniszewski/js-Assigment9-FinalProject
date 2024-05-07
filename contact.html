@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <Title>Contact Zad's Pizza Truck</Title>
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body>
+        <div id="wrapper">
+            <header class="top">
+                <img src="img/zadspizza.jpg" width="1000" height="330" alt="Zad's Pizza Truck Logo" />
+            </header>
+            <nav class="left">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="admin.html">Admin</a></li>
+                </ul>
+                <ul>
+                    <li>Phone:<br>(414) 897-7367</li>
+                </ul>
+            </nav>
+            <h1>Contact Us!</h1>
+            <hr>
+            <section class="maina">
+                <p>
+                    We love to hear from our current customers and those interested in visiting our food truck for the first time!
+                    <img src="img/contact1.jpg" width="200" height="150" class= "res" alt="contact1"/>
+                    We can be reached daily from 3:00-10:00 PM at (414) 897-7637. 
+                    Or you can stop by and visit us in-person during our normal truck hours of operation 4:00 -11:00 PM at the Zocalo Food Tuck Park in Milwaukee.
+                    <img src="img/contact2.jpg" width="350" height="180" class= "res" alt="contact2"/>
+                    <img src="img/contact3.jpg" width="350" height="180" class= "res" alt="contact3"/>
+                </p>
+            </section>
+            <h2>Join Our Newsletter!</h2>
+            <section class ="form">
+                <form id="contact" method="post" action = "submit.php">
+                    <br>
+                    <p>
+                        <label for="date">Today's Date</label>
+                        <input type="date" id="date" name="date">
+                    </p>
+                    <fieldset>
+                        <legend>Personal Information</legend>
+                        <p>
+                            <label for="fname">First Name:</label>
+                            <input type="text" id="fname" name="fname" required placeholder="Type Your First Name">*
+                        </p>
+                        <p>
+                            <label for="lname">Last Name:</label>
+                            <input type="text" id="lname" name="lname"required placeholder="Type Your Last Name">*
+                        </p>
+                        <p>
+                            <label for="birthdate">Birthday:</label>
+                            <input type="date" id="birthdate" name="birthdate">
+                        </p>
+                        <p>
+                            <label for="street">Street Address:</label>
+                            <input type="text" id="street" name="street">
+                        </p>
+                        <p>
+                            <label for="city">City:</label>
+                            <input type="text" id="city" name="city">
+                        </p>
+                        <p>
+                            <label for="state">State:</label>
+                            <input type="text" id="state" name="state">
+                        </p>
+                        <p>
+                            <label for="zip">Zip Code:</label>
+                            <input type="number" id="zip" name="zip">
+                        </p>
+                    </fieldset>
+                    <br>
+                    <fieldset>
+                        <legend>About You</legend>
+                        <p>
+                            <label for="you">How often do you go out for dinner?:</label>
+                            <br>
+                            Very rarely:
+                            <input type="radio" name="you" value="rarely">
+                            Once a week:
+                            <input type="radio" name="you" value="once">
+                            Twice a week:
+                            <input type="radio" name="you" value="twice">
+                            More than 3 times a week:
+                            <input type="radio" name="you" value="three">
+                        </p>
+                        <p>
+                            <label for="comm">Favorite Types of Food: </label>
+                            <input type="checkbox" name="italian" value="Italian">
+                            Italian
+                            <input type="checkbox" name="american" value="American">
+                            American
+                            <br>
+                            <input type="checkbox" name="mexican" value="Mexican">
+                            Mexican
+                            <input type="checkbox" name="chinese" value="Chinese">
+                            Chinese
+                        </p>
+                        <p>
+                            * Required
+                        </p>
+                    </fieldset>
+                    <p>
+                        <input type="submit" value="Submit Your Form">
+                    </p>
+                </form>
+            </section>
+                <footer class="bottom">
+                    <small>&copy; 2024 ZAD's Pizza Inc.</small>
+                    <address>
+                        <small>Have a question or comment about the site? <a href="site-feedback.html">Contact Our Web Team</small>
+                    </address>
+            </footer>
+        </div>
+    </body>
+ </html>

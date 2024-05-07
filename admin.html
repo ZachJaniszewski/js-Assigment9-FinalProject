@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <Title>Welcome to ZAD's Pizza Truck</Title>
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body>
+        <div id="wrapper">
+            <header class="top">
+                <img src="img/zadspizza.jpg" width="1000" height="330" alt="ZAD's Pizza Logo" />
+            </header>
+            <nav class="left">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="admin.html">Admin</a></li>
+                </ul>
+            </nav>
+    <h1><b>Change Menu items and Events</b></h1>
+    <hr>
+    <section class="maina">
+        <h2>Manage ZAD's Menu Items</h2>
+        <form id="addMenuItem" method="post" action="api/menu/add">
+            <h3>Add New Menu Item</h3>
+            <label for="itemName">Item Name:</label>
+            <input type="text" id="itemName" name="itemName" required><br>
+            <label for="itemPrice">Price:</label>
+            <input type="number" id="itemPrice" name="itemPrice" required><br>
+            <label for="itemDescription">Description:</label>
+            <textarea id="itemDescription" name="itemDescription"></textarea><br>
+            <input type="submit" value="Add Item">
+        </form>
+        <form id="updateMenuItem" method="post" action="api/menu/update">
+            <h3>Update Menu Item</h3>
+            <label for="itemId">Item ID:</label>
+            <input type="text" id="itemId" name="itemId" required><br>
+            <label for="newItemName">New Item Name:</label>
+            <input type="text" id="newItemName" name="newItemName"><br>
+            <label for="newItemPrice">New Price:</label>
+            <input type="number" id="newItemPrice" name="newItemPrice"><br>
+            <label for="newItemDescription">New Description:</label>
+            <textarea id="newItemDescription" name="newItemDescription"></textarea><br>
+            <input type="submit" value="Update Item">
+        </form>
+        <form id="deleteMenuItem" method="post" action="api/menu/delete">
+            <h3>Delete Menu Item</h3>
+            <label for="deleteItemId">Item ID:</label>
+            <input type="text" id="deleteItemId" name="deleteItemId" required>
+            <input type="submit" value="Delete Item">
+        </form>
+    </section>
+    <section class="mainb">
+        <h2>Manage ZAD's Events</h2>
+        <form id="addEvent" method="post" action="api/events/add">
+            <h3>Add New Event</h3>
+            <label for="eventName">Event Name:</label>
+            <input type="text" id="eventName" name="eventName" required><br>
+            <label for="eventDate">Date:</label>
+            <input type="date" id="eventDate" name="eventDate" required><br>
+            <label for="eventLocation">Location:</label>
+            <input type="text" id="eventLocation" name="eventLocation" required><br>
+            <input type="submit" value="Add Event">
+        </form>
+        <form id="updateEvent" method="post" action="api/events/update">
+            <h3>Update Event</h3>
+            <label for="eventId">Event ID:</label>
+            <input type="text" id="eventId" name="eventId" required><br>
+            <label for="newEventName">New Event Name:</label>
+            <input type="text" id="newEventName" name="newEventName"><br>
+            <label for="newEventDate">New Date:</label>
+            <input type="date" id="newEventDate" name="newEventDate"><br>
+            <label for="newEventLocation">New Location:</label>
+            <input type="text" id="newEventLocation" name="newEventLocation"><br>
+            <input type="submit" value="Update Event">
+        </form>
+        <form id="deleteEvent" method="post" action="api/events/delete">
+            <h3>Delete Event</h3>
+            <label for="deleteEventId">Event ID:</label>
+            <input type="text" id="deleteEventId" name="deleteEventId" required>
+            <input type="submit" value="Delete Event">
+        </form>
+    </section>
+
+    <footer class="bottom">
+        <small>&copy; 2024 ZAD's Pizza Inc.</small>
+        <address>
+            <small>Have a question or comment about the site? <a href="site-feedback.html">Contact Our Web Team</small>
+        </address>
+    </footer>
+</div>
+
+
+
+
+        
