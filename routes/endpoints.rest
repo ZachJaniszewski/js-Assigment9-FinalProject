@@ -1,0 +1,7 @@
+### Variables
+@port = 3000
+
+
+### Get menu
+
+GET http://localhost:{{port}}/api/menu
