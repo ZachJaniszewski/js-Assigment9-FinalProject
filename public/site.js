@@ -1,7 +1,7 @@
 (async () => {
 
 
-    const ul = document.querySelector('menu-list')
+    const ul = document.querySelector('#menu-list')
 
     const getMenu = async () => {
 		const response = await fetch('/api/menu')
@@ -27,11 +27,9 @@
 			descriptioneSpan.textContent = description
 			li.appendChild(descriptioneSpan)
 
-            if (image){
-                const img = document.createElement('img')
-                img.src = image
-                li.appendChild(img)
-            }
+            const imgSpan = document.createElement('img')
+			imgSpan.src = image
+			li.appendChild(imgSpan)
 
 			
 		})
