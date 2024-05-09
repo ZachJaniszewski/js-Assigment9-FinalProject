@@ -132,3 +132,94 @@ h2 {
     float: left;
     margin: 10px;
 }
+
+/* Menu Stuff start */
+
+#menu-title {
+    font-style: normal;
+    text-align: center;
+    text-decoration: underline;
+}
+
+#menu-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#menu-list li {
+    display: flex;
+    align-items: center;
+    width: 800px;
+    margin-left: auto;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+#menu-list li span {
+    margin-right: 10px;
+}
+
+#menu-list li span:first-child {
+    font-weight: bold;
+    flex: 0.5;
+}
+
+#menu-list li span:nth-child(2) {
+    color: #006400;
+    margin-right: 20px;
+}
+
+#menu-list li span:nth-child(3) {
+    flex: 2;
+}
+
+#menu-list li img {
+    width: 150px;
+    height: 150px;
+    margin-left: auto;
+    border-radius: 5px;
+}
+
+#menu-form {
+	display: flex;
+    flex-direction: column;
+	align-items: center;
+    justify-content: center;
+    width: 50%;
+    margin: 0 auto;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#menu-form input {
+    width: 80%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#menu-form textarea {
+    width: 80%;
+    height: 100px;
+    padding: 8px;
+    margin-bottom: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+#menu-form button {
+    padding: 10px 20px;
+    background-color: #FFF;
+    color: black;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#menu-form button:hover {
+    background-color: #0056b3;
+}

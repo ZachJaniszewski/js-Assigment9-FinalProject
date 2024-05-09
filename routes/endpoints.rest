@@ -5,3 +5,15 @@
 ### Get menu
 
 GET http://localhost:{{port}}/api/menu
+
+### Post menu item
+POST http://localhost:{{port}}/api/menu
+Content-Type: application/json
+
+{
+    "name": "Diavolo",
+    "price": "$20.00",
+    "description": "San Marzano tomato sauce, cayenne pepper, hot calabrese salami, onion, red bell pepper, and mozzarella.",
+    "image": "img/pizza2sm.jpg"
+    
+}

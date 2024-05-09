@@ -21,4 +21,12 @@ router.get('/', async (_, response) => {
 	
 })
 
+router.post('/', async (request, response) => {
+    const { name, price, image, description } = request.body
+    const collection = await getCollection('foodtruck-api', 'menu')
+    const result = await collection.insertOne({ name, price, image, description })
+
+    response.json({ result })
+})
+
 module.exports = router
