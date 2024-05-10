@@ -52,6 +52,28 @@
 	}
     displayMenu(await getMenu())
 
+    button.addEventListener('click', async () => {
+
+        const data = {
+            name: nameInput.value,
+            price: priceInput.value,
+            description: descriptionInput.value,
+            image: imageInput.value
+        }
+
+        const response = await fetch('/api/menu', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify( data )
+        })
+
+        nameInput.value = ''
+        priceInput.value = ''
+        descriptionInput.value = ''
+        imageInput.value = ''
+        displayMenu(await getMenu())
+    })
+
 
     
 
@@ -85,27 +107,7 @@
 
     displayEvents(await getEvents())
 
-    button.addEventListener('click', async () => {
-
-        const data = {
-            name: nameInput.value,
-            price: priceInput.value,
-            description: descriptionInput.value,
-            image: imageInput.value
-        }
-
-        const response = await fetch('/api/menu', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify( data )
-        })
-
-        nameInput.value = ''
-        priceInput.value = ''
-        descriptionInput.value = ''
-        imageInput.value = ''
-        displayMenu(await getMenu())
-    })
+    
 
 
 })()
