@@ -4,6 +4,7 @@
         <meta charset="utf-8">
         <Title>Welcome to ZAD's Pizza Truck</Title>
         <link rel="stylesheet" href="styles.css">
+        <script src="site.js" defer></script>
     </head>
     <body>
         <div id="wrapper">
@@ -22,15 +23,13 @@
     <hr>
     <section class="maina">
         <h2>Manage ZAD's Menu Items</h2>
-        <form id="addMenuItem" method="post" action="api/menu/add">
-            <h3>Add New Menu Item</h3>
-            <label for="itemName">Item Name:</label>
-            <input type="text" id="itemName" name="itemName" required><br>
-            <label for="itemPrice">Price:</label>
-            <input type="number" id="itemPrice" name="itemPrice" required><br>
-            <label for="itemDescription">Description:</label>
-            <textarea id="itemDescription" name="itemDescription"></textarea><br>
-            <input type="submit" value="Add Item">
+        <ul hidden id="menu-list"></ul>
+        <form id="menu-form">
+            <input type="text" id="name-input" placeholder="Enter a menu item">
+            <input type="text" id="price-input" placeholder="Enter a price">
+            <textarea id="description-input" placeholder="Enter an item description"></textarea>
+            <input type="text" id="image-input" placeholder="Enter an image Ex. 'img/blah.jpg'">
+            <button id="menu-button">Add Item</button>
         </form>
         <form id="updateMenuItem" method="post" action="api/menu/update">
             <h3>Update Menu Item</h3>

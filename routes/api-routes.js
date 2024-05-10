@@ -10,7 +10,7 @@ const getCollection = async (dbName, collectionName) => {
     return client.db(dbName).collection(collectionName)
 }
 
-router.get('/', async (_, response) => {
+router.get('/menu', async (_, response) => {
 	const collection = await getCollection('foodtruck-api', 'menu')
 	const menu = await collection.find().toArray()
 	const menuId = menu.map((menu) => {
@@ -21,12 +21,27 @@ router.get('/', async (_, response) => {
 	
 })
 
-router.post('/', async (request, response) => {
+router.post('/menu', async (request, response) => {
     const { name, price, image, description } = request.body
     const collection = await getCollection('foodtruck-api', 'menu')
     const result = await collection.insertOne({ name, price, image, description })
 
     response.json({ result })
+})
+
+
+
+// Events
+
+router.get('/events', async (_, response) => {
+	const collection = await getCollection('foodtruck-api', 'events')
+	const events = await collection.find().toArray()
+	const eventId = events.map((events) => {
+		return { ...events, id: events._id };
+	})
+	console.log(events)
+	response.json(eventId)
+	
 })
 
 module.exports = router

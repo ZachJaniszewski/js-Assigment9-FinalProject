@@ -17,3 +17,7 @@ Content-Type: application/json
     "image": "img/pizza2sm.jpg"
     
 }
+
+### Get events
+
+GET http://localhost:{{port}}/api/events
