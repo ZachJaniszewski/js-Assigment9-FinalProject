@@ -79,6 +79,7 @@
 	}
     displayMenu(await getMenu())
 
+	
     button.addEventListener('click', async () => {
 
         const data = {
@@ -187,6 +188,25 @@
     displayEvents(await getEvents())
   })
 
+	//add event on button click
+addEventForm.addEventListener('click', async () => {
+        const data = {
+            name: eventNameInput.value,
+            date: eventDateInput.value,
+            location: eventLocationInput.value,
+        }
+        const response = await fetch('/api/events', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify( data )
+        })
+
+        eventNameInput.value = ''
+        eventDateInput.value = ''
+        eventLocationInput.value = ''
+        displayMenu(await getEvents())
+    })
+	
   deleteEventForm.addEventListener('submit', async (e) => {
     e.preventDefault()
     const eventId = deleteEventIdInput.value
