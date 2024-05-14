@@ -18,6 +18,36 @@ Content-Type: application/json
     
 }
 
+
+### Update menu item
+PUT http://localhost:{{port}}/api/menu/663ac51757f32188028b5351
+Content-Type: application/json
+
+{
+  "name": "Bruschetta",
+  "price": "$11.50",
+  "description": "Wood fired home made Italian bread, served with extra virgin olive oil",
+  "image": "img/app1sm.jpg"
+}
+
+### Delete menu item
+DELETE http://localhost:{{port}}/api/menu/663d59f878bbe63d0743bb58
+
 ### Get events
 
 GET http://localhost:{{port}}/api/events
+
+
+### Update event
+PUT http://localhost:{{port}}/api/events/663d628091f804f69a988590
+Content-Type: application/json
+
+{
+  "name": "Milwaukee Food Festival",
+  "location": "Milwaukee Public Market",
+  "date": "June 19, 2024",
+  "hours": "11 AM to 7 PM"
+}
+
+### Delete event
+DELETE http://localhost:{{port}}/api/events/663e78fff3fa176552e90703
