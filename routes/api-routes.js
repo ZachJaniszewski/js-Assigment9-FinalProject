@@ -81,6 +81,14 @@ router.post('/events', async (request, response) => {
     response.json({ result })
 })
 
+router.get('/events/:id', async (request, response) => {
+    const { id } = request.params
+    const collection = await getCollection('foodtruck-api', 'events')
+    const event = await collection.findOne({ "_id": new ObjectId(id) })
+    response.json(event)
+
+})
+
   router.delete('/events/:id', async (request, response) => {
 	const { id } = request.params;
 	const collection = await getCollection('foodtruck-api', 'events');
