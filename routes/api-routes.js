@@ -73,6 +73,25 @@ router.put('/events/:id', async (request, response) => {
 		response.json({ message: 'Event has been updated' });
   });
 
+
+router.post('/events', async (request, response) => {
+    const { name, location, date, hours } = request.body
+    const collection = await getCollection('foodtruck-api', 'events')
+    const result = await collection.insertOne({ name, location, date, hours })
+
+    response.json({ result })
+})
+
+
+router.get('/events/:id', async (request, response) => {
+    const { id } = request.params
+    const collection = await getCollection('foodtruck-api', 'events')
+    const event = await collection.findOne({ "_id": new ObjectId(id) })
+    response.json(event)
+
+})
+
+
   router.delete('/events/:id', async (request, response) => {
 	const { id } = request.params;
 	const collection = await getCollection('foodtruck-api', 'events');
