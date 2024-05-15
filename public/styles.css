@@ -233,10 +233,10 @@ footer {
 
 #event-title {
     font-style: normal;
-    text-align: center;
+    text-align: left; /* or 'center' depending on your design */
     text-decoration: underline;
-    padding-top: 80%;
-    padding-right: 25%;
+    padding-top: 20px; /* Adjust as needed, but greatly reduce from 80% */
+    padding-right: 0; /* Reset this if not needed */
 }
 
 #event-list li {
@@ -256,4 +256,32 @@ footer {
     content: ' | '; 
     margin-left: 10px; 
 }
+.content-area {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch; /
+}
 
+.content-maina, .content-mainb {
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box; 
+}
+
+.content-maina {
+    margin-right: 10px; 
+}
+
+.content-mainb img {
+    width: 100%; 
+    height: auto; 
+    display: block; 
+}
+
+
+video {
+    width: 100%; 
+    height: auto; 
+    display: block; 
+    margin-top: 20px; 
+}
