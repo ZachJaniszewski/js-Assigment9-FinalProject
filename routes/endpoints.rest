@@ -66,3 +66,4 @@ Content-Type: application/json
 
 ### Delete event 
 DELETE http://localhost:{{port}}/api/events/663e78fff3fa176552e90703
+
