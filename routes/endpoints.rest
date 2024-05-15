@@ -37,6 +37,21 @@ DELETE http://localhost:{{port}}/api/menu/663d59f878bbe63d0743bb58
 
 GET http://localhost:{{port}}/api/events
 
+### Get events by id
+
+GET http://localhost:{{port}}/api/events/663d628091f804f69a988590
+
+### Post event item
+POST http://localhost:{{port}}/api/events
+Content-Type: application/json
+
+{
+    "name": "Oshkosh Farmers Market",
+    "location": "Oshkosh Town Square",
+    "date": "August 11, 2024",
+    "hours": "9 AM to 2:30 PM"
+    
+}
 
 ### Update event
 PUT http://localhost:{{port}}/api/events/663d628091f804f69a988590
