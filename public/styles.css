@@ -235,17 +235,32 @@ footer {
     font-style: normal;
     text-align: center;
     text-decoration: underline;
-    padding-top: 80%;
     padding-right: 25%;
 }
 
 #event-list li {
-    display: flex;
+    /* display: flex; */
     align-items: center;
-    width: 800px;
+    width: 500px;
     padding: 10px;
     border-bottom: 1px solid #ccc;
+    list-style-type: none;
+    margin: auto;
+    margin-left: 260px;
     
+    
+}
+
+#event-list {
+    background-color: #2f3032; /* Change background color */
+    color: #fff; /* Change text color */
+    border: none; /* Remove default border */
+    padding: 10px 20px; /* Adjust padding for better appearance */
+    cursor: pointer; /* Show pointer cursor on hover */
+}
+
+#event-list:hover {
+    background-color: #2f3032; /* Darker background color on hover */
 }
 
 #event-list li span {
@@ -253,7 +268,51 @@ footer {
 }
 
 #event-list li span:not(:last-child)::after {
-    content: ' | '; 
+    /* content: ' | ';  */
     margin-left: 10px; 
 }
 
+/* Collapsbile event CSS */
+button {
+    color: #2f3032;
+}
+
+.event-details {
+    display: none;
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+
+.event-details.show {
+    display: block;
+}
+
+.content-area {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch; /
+}
+
+.content-maina, .content-mainb {
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box; 
+}
+
+.content-maina {
+    margin-right: 10px; 
+}
+
+.content-mainb img {
+    width: 100%; 
+    height: auto; 
+    display: block; 
+}
+
+
+video {
+    width: 100%; 
+    height: auto; 
+    display: block; 
+    margin-top: 20px; 
+}
