@@ -44,6 +44,7 @@ Content-Type: application/json
 
 {
 "name": "Oshkosh Farmers Market", "location": "Oshkosh Town Square", "date": "August 11, 2024", "hours": "9 AM to 2:30 PM"
+
 }
 
 ### Update event
